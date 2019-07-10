@@ -2,27 +2,24 @@ function mostrar()
 {
     var mesDelAño = document.getElementById('mes').value;
 
-    if (mesDelAño == 'Enero') {
-        alert ("Que comiences bien el año!!!");
+    switch (mesDelAño) {
+        case "Enero":
+            alert ("Que comiences bien el año!!!");
+        break;
+
+        case "Marzo":
+            alert ("A clases!!!");
+        break;
+
+        case "Julio":
+            alert ("Se vienen las vacaciones!!!");
+        break;
+
+        case "Diciembre":
+            alert ("Felices fiestas!!!");
+        break
     }
 
-    else {
-        if (mesDelAño == 'Marzo') {
-            alert ("a clases!!!");
-            }
-
-        else {
-                if (mesDelAño == 'Julio'){
-                    alert("se vienen las vacaciones!!!");
-                }
-
-                else {
-                    if (mesDelAño == 'Diciembre'){
-                    alert ("Felices fiestas!!!");
-                        }
-                    }
-            }
-
-        }
+    
         
 }//FIN DE LA FUNCIÓN
