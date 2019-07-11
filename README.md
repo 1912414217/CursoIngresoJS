@@ -14,3 +14,7 @@ ejercitación y TP para rendir el examen de ingreso
 
 
 http://octaviovillegas.github.io/CursoIngresoJS/index.html
+
+a- git add
+b- git commit
+c- git push
