@@ -25,5 +25,23 @@ var mesDelAño = document.getElementById('mes').value;
         break;
     }
 
-
 }//FIN DE LA FUNCIÓN
+
+
+// otra forma de hacerlo (switch + if)
+	
+	/*
+	switch (mesDelAño)
+	    {
+		case "Febrero":
+		    alert ("Este mes no tiene más de 29 días.");
+		break;
+	    }
+
+	    if (mesDelAño != 'Febrero')
+	    {
+		alert("Este mes tiene 30 o más días");
+	    }
+	
+	*/ 
+
