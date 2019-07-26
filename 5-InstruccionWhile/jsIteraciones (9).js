@@ -1,5 +1,3 @@
-//Al presionar el botón pedir números hasta que el usuario quiera, mostrar el número máximo y el número mínimo ingresado.
-
 function mostrar()
 {
 
@@ -26,15 +24,18 @@ function mostrar()
 		{
 			max = numero;
 			min = numero;
-		}	
-
-		if (numero >= max)
-		{
-			max = numero;
-		} else if (numero <= min)
+		}else
 			{
-				min = numero;
+				if (numero >= max)
+				{
+					max = numero;
+				} if (numero <= min)
+					{
+						min = numero;
+					}
 			}
+
+		
 
 		respuesta = prompt ("Desea ingresar otro numero? ").toLowerCase();
 	}
