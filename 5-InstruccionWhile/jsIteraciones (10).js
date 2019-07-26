@@ -19,7 +19,6 @@
 
 function mostrar()
 {
-
 	var acumulador=0;
 	var respuesta='si';
 	var numero;
