@@ -8,7 +8,7 @@ mostrar los numeros pares desde el 1 al número ingresado, y mostrar la cantidad
 
     for (i = 1 ; i <= numero ; i++)
     {
-        if( 1 % 2 == 0 && i != 0)
+        if(i % 2 == 0 && i != 0)
         {
             console.log(i)
             pares++
