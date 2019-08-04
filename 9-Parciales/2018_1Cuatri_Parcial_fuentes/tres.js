@@ -8,4 +8,3 @@ function mostrar()
 
     document.getElementById('elPrecioFinal').value = precioFinal;
 }
-// hay que fijarse si esta bien la cuenta
