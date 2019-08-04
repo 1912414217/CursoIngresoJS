@@ -12,8 +12,19 @@ function mostrar()
 {
     var hora = document.getElementById('laHora').value;
 
+
+    if (hora > 19)
+    {
+          if (hora < 25)
+           {
+            alert("Es de noche");
+            alert("A dormir");
+          }
+    }
+    
     switch(hora)
     {
+        
         case '6':
         case '7':
         case '8':
@@ -33,17 +44,11 @@ function mostrar()
         case '19':
             alert("Es de tarde");
         break;
-
-       if (hora > 19)
-       {
-           if (hora < 24)
-           {
-                alert("Es de noche");
-                alert("A dormir");
-           }
-       }
-
-        default:
-          alert("la hora no es válida.")
     }
+
+    if(hora > 24 || hora < 0)
+    {
+        alert("La hora no es valida");
+    }
+    
 }
