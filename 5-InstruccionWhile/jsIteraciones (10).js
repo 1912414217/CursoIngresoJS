@@ -50,10 +50,11 @@ function mostrar()
 			{
 				positivo = positivo + numero;
 				cantidadPositivos++;
-			} else if (numero == 0)
-				{
-					cantidadCeros++;
-				}
+			} 
+		if (numero == 0)
+		{
+			cantidadCeros++;
+		}
 
 		respuesta = prompt ("Desea ingresar otro numero? ");
 	}
