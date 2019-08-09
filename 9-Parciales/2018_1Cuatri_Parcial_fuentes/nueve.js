@@ -16,34 +16,81 @@ Testeo con los siguientes valores
 
 function mostrar()
 {
-    var marca;
-    var peso;
-    var temperatura;
-    var respuesta = 'si';
-    var temperaturaPar = 0;
+   var marca;
+   var peso;
+   var temperatura;
+   var respuesta = 'si'.toLowerCase();
+   var temperaturaPar = 0;
+   var contador = 0; //epa todavia no esta usado
+   var cantidadMenosCeroGrados = 0;
+   var acumulador = 0;
+   var promedio;
+   var max;
+   var min;
+   
+   while(respuesta == 'si')
+   {    
+       contador++;
+        //ingreso y validacion de marca, peso y temperatura
+       marca = prompt("Ingrese marca del producto");
+       peso = parseInt(prompt("Ingrese peso", "el peso debe ser entre 1 y 100"));
+       acumulador += peso;
 
-    while(respuesta == 'si')
-    {
-        marca = prompt("Ingrese marca del producto: ").toLowerCase();//pide marca
+       while(peso < 1 || peso > 100)
+       {
+           peso = parseInt(prompt("Error!! Ingrese peso valido"));
+       }
 
-        /*peso = prompt("Ingrese peso del mismo: ");//pide peso
+       temperatura = parseInt(prompt("Ingrese temperatura de almacenamiento", "la temperatura debe ser entre -30 y 30"));
+       while (temperatura < -30 || temperatura > 30)
+       {
+           temperatura = parseInt(prompt("Error!! Ingrese temperatura entre -30 y 30"));
+       }
+       //fin de ingreso y validacion de marca, peso y temperatura
 
-        while(peso < 1 || peso > 100 || isNaN(peso))//valida peso
+       //calcula temperatura par
+       if (temperatura % 2 == 0)
+       {
+           temperaturaPar++;
+       }
+       //termina de calcular temperatura par
+
+       //temperatura menor a 0 grados
+       if (temperatura < 0)
         {
-            peso = prompt("Ingrese peso entre 1 y 100");
-        }*/
-
-        temperatura = prompt("Ingrese temperatura de almacenamiento: ");//pide temperatura de almacenamiento
-
-        while(temperatura < -30 || temperatura > 30 || isNaN(temperatura));//valida temperatura
-        {
-            temperatura = prompt("Ingrese temperatura de almacenamiento entre -30 y 30")
+            cantidadMenosCeroGrados++;
         }
+        //fin de temperatura menor a 0 grados
 
-        /*if (temperatura % 2 == 0)
-        {
-           parseInt(temperaturaPar++);
-        }*/
-        respuesta = prompt("Desea ingresar otro producto?").tolowerCase();
+        //peso maximo y minimo
+        if (contador == 1)
+		{
+			max = peso;
+			min = peso;
+		}else
+			{
+				if (peso >= max)
+				{
+					max = peso;
+				} if (peso <= min)
+					{
+						min = peso;
+					}
+            }
+        //fin peso maximo y minimo
+
+        promedio = contador / acumulador;
+        
+        respuesta = prompt("Desea agregar otro producto??");
     }
+       
+
+    document.write("La cantidad de temperaturas pares es: "+temperaturaPar+"<br>");//temperauras pares
+    document.write("La marca del producto mas pesado es: "+marcaductoMasPesado+"<br>");
+    document.write("Cantidad de productos que se conservan a menos de 0 grados es: "+cantidadMenosCeroGrados+"<br>");//productos que se conservan a menos de 0 grados
+    document.write("El promedio de todos los productos es: "+promedio+"<br>");//promedio de todos los productos
+    document.write("El peso maximo es: "+max+"<br>");//peso maximo
+    document.write("El peso minimo es: "+min+"<br>");//peso minimo
 }
+
+// falta el punto 'B'
